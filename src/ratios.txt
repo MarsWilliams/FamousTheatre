@@ -1,0 +1,1 @@
+145.273 (frame): 48.028 (mountain) : 22.333 px (animals) : 7.747 px (cloud) : 17.554 px (pompom) : 19.646 px (earflap) : 4.778 px (snowflake)
