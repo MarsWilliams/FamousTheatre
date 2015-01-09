@@ -7,9 +7,15 @@ var StateModifier = require('famous/modifiers/StateModifier');
 function PompomView() {
     View.apply(this, arguments);
     this.surface = new ImageSurface({
-        content: 'images/pomPomHat.svg',
+        content: 'images/hat.svg',
+        size: [12.94*5, 11.05*5]
     });
-    this.add(this.surface);
+    this.pompomModifier = new StateModifier({
+    	origin: [-0.15,-3.55],
+    	align: [0.75,0],
+  	transform: Transform.translate(0, 0, 22)
+  });
+    this.add(this.pompomModifier).add(this.surface);
 }
 
 PompomView.prototype = Object.create(View.prototype);

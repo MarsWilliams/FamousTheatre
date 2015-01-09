@@ -8,8 +8,14 @@ function EagleView() {
     View.apply(this, arguments);
     this.surface = new ImageSurface({
         content: 'images/eagle.svg',
+        size: [16.398*5, 22.333*5]
     });
-    this.add(this.surface);
+    this.eagleModifier = new StateModifier({
+    	origin: [0,-1],
+    	align: [0.75,0],
+  	transform: Transform.translate(0, 0, 25)
+  });
+    this.add(this.eagleModifier).add(this.surface);
 }
 
 EagleView.prototype = Object.create(View.prototype);
